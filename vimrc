@@ -5,9 +5,8 @@ set background=dark
 set number
 "adding configuration for new plugins
 set nocompatible
-" make Vim behave in a more useful way
-set nocompatible
-
+"Backspace over everything
+set backspace=indent,eol,start
 " define number of colors
 set t_Co=256
 
