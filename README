@@ -1,0 +1,8 @@
+Installation
+
+git clone [add path to repo]
+
+Create Symlinks
+
+	ln -s ~/dotfiles/vimrc ~/.vimrc
+
