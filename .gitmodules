@@ -1,0 +1,9 @@
+[submodule "pack/my-plugins/lightline.vim"]
+	path = pack/my-plugins/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "pack/my-plugins/start/lightline.vim"]
+	path = pack/my-plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "pack/my-plugins/start/vim-colors-solarized"]
+	path = pack/my-plugins/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
