@@ -39,3 +39,6 @@ endfunction
 
 " map F12 to ToggleSolarizedTheme() function
 map <F12> :call ToggleSolarizedTheme()<CR>
+"remap ctrl p 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
