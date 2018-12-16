@@ -1,4 +1,4 @@
-#Installation#
+# Installation
 
 Go to ~/.vim folder Run this: 
 ```
