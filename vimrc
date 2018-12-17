@@ -32,6 +32,10 @@ function! ToggleSolarizedTheme()
 endfunction
 " map F12 to ToggleSolarizedTheme() function
 map <F12> :call ToggleSolarizedTheme()<CR>
+"CtrlP
+"set runtimepath^=~/.vim/pack/my-plugins/start/ctrlp.vim
 "remap ctrl p 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+"show tablines for buffers
+let g:airline#extensions#tabline#enabled = 1
