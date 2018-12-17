@@ -8,7 +8,8 @@ Add this line to .vimrc profile in home directory:
 ```
 runtime vimrc
 ```
-Pull in the submodules by going to ~/.vim and running: 
+Pull in the submodules by going to ~/.vim and running:
+(Note: when installing new plugins you will need to run these new commands in each submodules folder)
 ```
 git submodule init
 git submodule update
