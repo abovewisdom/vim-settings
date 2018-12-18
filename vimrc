@@ -39,3 +39,18 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 "show tablines for buffers
 let g:airline#extensions#tabline#enabled = 1
+"Apex plugin settings
+filetype plugin on
+"hidden buffers
+set hidden
+"make vimdiff better
+:set diffopt+=algorithm:patience
+"Force.com settings
+let g:apex_backup_folder="/tmp/apex/backup"
+let g:apex_temp_folder="/tmp/apex/gvim-deployment"
+"Credentials for the Salesforce org go in the directory below
+let g:apex_properties_folder="/media/truecrypt1"
+"Path to a package that is needed
+let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
+
+
