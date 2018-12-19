@@ -39,6 +39,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 "show tablines for buffers
 let g:airline#extensions#tabline#enabled = 1
+"make insert -> Normal fast
+set timeoutlen=1000 ttimeoutlen=0
 "Apex plugin settings
 filetype plugin on
 "hidden buffers
@@ -52,5 +54,3 @@ let g:apex_temp_folder="/tmp/apex/gvim-deployment"
 let g:apex_properties_folder="/media/truecrypt1"
 "Path to a package that is needed
 let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
-
-
