@@ -39,3 +39,5 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 "show tablines for buffers
 let g:airline#extensions#tabline#enabled = 1
+"make insert -> Normal fast
+set timeoutlen=1000 ttimeoutlen=0
