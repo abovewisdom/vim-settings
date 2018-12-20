@@ -1,5 +1,10 @@
 # Installation
 
+Dependencies
+```
+brew install the_silver_searcher
+brew install fzf
+```
 Go to ~/.vim folder Run this: 
 ```
 git clone https://github.com/abovewisdom/vim-setup.git
