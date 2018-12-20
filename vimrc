@@ -54,3 +54,5 @@ let g:apex_temp_folder="/tmp/apex/gvim-deployment"
 let g:apex_properties_folder="/media/truecrypt1"
 "Path to a package that is needed
 let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
+" Enable fzf
+set rtp+=/usr/local/opt/fzf

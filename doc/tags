@@ -175,6 +175,7 @@ ctrlp-mappings	ctrlp.txt	/*ctrlp-mappings*
 ctrlp-miscellaneous-configs	ctrlp.txt	/*ctrlp-miscellaneous-configs*
 ctrlp-options	ctrlp.txt	/*ctrlp-options*
 ctrlp.txt	ctrlp.txt	/*ctrlp.txt*
+<<<<<<< HEAD
 force.com	force.com.txt	/*force.com*
 force.com-config-example	force.com.txt	/*force.com-config-example*
 force.com-credits	force.com.txt	/*force.com-credits*
@@ -191,6 +192,26 @@ force.com-usage	force.com.txt	/*force.com-usage*
 force.com.txt	force.com.txt	/*force.com.txt*
 g:apex_server_port	force.com.txt	/*g:apex_server_port*
 g:apex_server_timeoutSec	force.com.txt	/*g:apex_server_timeoutSec*
+fzf-vim	fzf-vim.txt	/*fzf-vim*
+fzf-vim-advanced-customization	fzf-vim.txt	/*fzf-vim-advanced-customization*
+fzf-vim-command-local-options	fzf-vim.txt	/*fzf-vim-command-local-options*
+fzf-vim-commands	fzf-vim.txt	/*fzf-vim-commands*
+fzf-vim-completion-helper	fzf-vim.txt	/*fzf-vim-completion-helper*
+fzf-vim-custom-statusline	fzf-vim.txt	/*fzf-vim-custom-statusline*
+fzf-vim-customization	fzf-vim.txt	/*fzf-vim-customization*
+fzf-vim-fzf-heart-vim	fzf-vim.txt	/*fzf-vim-fzf-heart-vim*
+fzf-vim-global-options	fzf-vim.txt	/*fzf-vim-global-options*
+fzf-vim-hide-statusline	fzf-vim.txt	/*fzf-vim-hide-statusline*
+fzf-vim-installation	fzf-vim.txt	/*fzf-vim-installation*
+fzf-vim-license	fzf-vim.txt	/*fzf-vim-license*
+fzf-vim-mappings	fzf-vim.txt	/*fzf-vim-mappings*
+fzf-vim-rationale	fzf-vim.txt	/*fzf-vim-rationale*
+fzf-vim-reducer-example	fzf-vim.txt	/*fzf-vim-reducer-example*
+fzf-vim-status-line-of-terminal-buffer	fzf-vim.txt	/*fzf-vim-status-line-of-terminal-buffer*
+fzf-vim-toc	fzf-vim.txt	/*fzf-vim-toc*
+fzf-vim-usage	fzf-vim.txt	/*fzf-vim-usage*
+fzf-vim-using-vim-plug	fzf-vim.txt	/*fzf-vim-using-vim-plug*
+fzf-vim-why-you-should-use-fzf-on-vim	fzf-vim.txt	/*fzf-vim-why-you-should-use-fzf-on-vim*
 g:ctrlp_dont_split	ctrlp.txt	/*g:ctrlp_dont_split*
 g:ctrlp_dotfiles	ctrlp.txt	/*g:ctrlp_dotfiles*
 g:ctrlp_highlight_match	ctrlp.txt	/*g:ctrlp_highlight_match*
@@ -206,6 +227,11 @@ g:ctrlp_regexp_search	ctrlp.txt	/*g:ctrlp_regexp_search*
 must	force.com.txt	/*must*
 resources_unpacked	force.com.txt	/*resources_unpacked*
 salesforce	force.com.txt	/*salesforce*
+g:fzf_buffers_jump	fzf-vim.txt	/*g:fzf_buffers_jump*
+g:fzf_command_prefix	fzf-vim.txt	/*g:fzf_command_prefix*
+g:fzf_commands_expect	fzf-vim.txt	/*g:fzf_commands_expect*
+g:fzf_commits_log_options	fzf-vim.txt	/*g:fzf_commits_log_options*
+g:fzf_tags_command	fzf-vim.txt	/*g:fzf_tags_command*
 string-match	ctrlp.txt	/*string-match*
 vim-force.com	force.com.txt	/*vim-force.com*
 zipped-resources	force.com.txt	/*zipped-resources*
