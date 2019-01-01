@@ -37,9 +37,18 @@ map <F12> :call ToggleSolarizedTheme()<CR>
 "remap ctrl p 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-"show tablines for buffers
-let g:airline#extensions#tabline#enabled = 1
 "make insert -> Normal fast
 set timeoutlen=1000 ttimeoutlen=0
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
+"shortcut key for paste
+noremap ,, :%w !pbcopy<CR>
+"hide buffers instead of needing to save before switching
+set hidden
+"settings for lightline-bufferline
+let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+set showtabline=2
+let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#min_buffer_count = 2
