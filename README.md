@@ -23,6 +23,10 @@ Add new plugins or submodules by going to the ~/.vim/pack/my-plugins/start/ and 
 ```
 git submodule add [INSERT GIT URL]
 ```
+Run this command to pull all of the files down for the submodules:
+```
+git submodule update --init --recursive
+```
 Add help files to ~/.vim/doc and run: 
 ```
 :helptags ~/.vim/doc

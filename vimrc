@@ -1,13 +1,12 @@
 syntax on
 filetype plugin indent on
-set background=dark
-"colorscheme solarized
 set number
-"adding configuration for new plugins
-set nocompatible
+"adding configuration for new plugins(taking this out to see if it breaks
+"anything)
+"set nocompatible
 "Backspace over everything
 set backspace=indent,eol,start
-" define number of colors
+"define number of colors
 set t_Co=256
 " define initial background (light/dark)
 set background=dark
@@ -15,7 +14,7 @@ set background=dark
 colorscheme solarized
 " always display status line
 set laststatus=2
-" do not show mode
+" do not show mode as lightline shows it
 set noshowmode
 " define lightline configuration
 let g:lightline = {
@@ -32,13 +31,11 @@ function! ToggleSolarizedTheme()
 endfunction
 " map F12 to ToggleSolarizedTheme() function
 map <F12> :call ToggleSolarizedTheme()<CR>
-"CtrlP
+"CtrlP settings(remove if not needed)
 "set runtimepath^=~/.vim/pack/my-plugins/start/ctrlp.vim
 "remap ctrl p 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-"show tablines for buffers
-let g:airline#extensions#tabline#enabled = 1
 "make insert -> Normal fast
 set timeoutlen=1000 ttimeoutlen=0
 "Apex plugin settings
@@ -56,3 +53,14 @@ let g:apex_properties_folder="/media/truecrypt1"
 let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
+"shortcut key for copy entire fiel to clipboard 
+noremap ,, :%w !pbcopy<CR>
+"hide buffers instead of needing to save before switching
+set hidden
+"settings for lightline-bufferline
+let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+set showtabline=2
+let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#min_buffer_count = 2
