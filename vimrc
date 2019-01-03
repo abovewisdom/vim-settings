@@ -19,6 +19,14 @@ set noshowmode
 " define lightline configuration
 let g:lightline = {
       \ 'colorscheme': 'solarized',
+      \  'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'modified', 'buffers']
+      \           ]   
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head',
+      \ },
       \ }
 " define function to toggle solarized theme
 " change background and update lightline color scheme
@@ -61,6 +69,4 @@ set hidden
 let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
-set showtabline=2
 let g:lightline#bufferline#show_number = 1
-let g:lightline#bufferline#min_buffer_count = 2
