@@ -70,3 +70,5 @@ let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
 let g:lightline#bufferline#show_number = 1
+
+
