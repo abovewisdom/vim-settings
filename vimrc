@@ -70,3 +70,7 @@ let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
 let g:lightline#bufferline#show_number = 1
+"abreviation for finding files in parent folder usage: :e %%/
+cabbr <expr> %% expand('%:p:h')
+"highlight searches
+noremap ,; :set hlsearch!<CR>
