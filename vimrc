@@ -73,4 +73,5 @@ let g:lightline#bufferline#show_number = 1
 "abreviation for finding files in parent folder usage: :e %%/
 cabbr <expr> %% expand('%:p:h')
 "highlight searches
+set hlsearch
 noremap ,; :set hlsearch!<CR>
