@@ -61,3 +61,5 @@ let g:lightline#bufferline#show_number = 1
 cabbr <expr> %% expand('%:p:h')
 "highlight searches
 noremap ,; :set hlsearch!<CR>
+"Tidy command for HTML5
+:vmap ,x :!tidy -q -i --show-errors 0<CR>
