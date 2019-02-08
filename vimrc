@@ -1,9 +1,10 @@
 syntax on
-filetype plugin indent on
+"indent properly if the filtype is known
+if has("autocmd")
+  filetype indent plugin on
+endif
+"line numbers on
 set number
-"adding configuration for new plugins(taking this out to see if it breaks
-"anything)
-"set nocompatible
 "Backspace over everything
 set backspace=indent,eol,start
 "define number of colors
@@ -39,16 +40,11 @@ function! ToggleSolarizedTheme()
 endfunction
 " map F12 to ToggleSolarizedTheme() function
 map <F12> :call ToggleSolarizedTheme()<CR>
-"CtrlP settings(remove if not needed)
-"set runtimepath^=~/.vim/pack/my-plugins/start/ctrlp.vim
-"remap ctrl p 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 "make insert -> Normal fast
 set timeoutlen=1000 ttimeoutlen=0
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
-"shortcut key for copy entire fiel to clipboard 
+"shortcut key for copy entire file to clipboard 
 noremap ,, :%w !pbcopy<CR>
 "hide buffers instead of needing to save before switching
 set hidden
@@ -59,6 +55,8 @@ let g:lightline.component_type   = {'buffers': 'tabsel'}
 let g:lightline#bufferline#show_number = 1
 "abreviation for finding files in parent folder usage: :e %%/
 cabbr <expr> %% expand('%:p:h')
+"light search on at first
+set hlsearch
 "highlight searches
 noremap ,; :set hlsearch!<CR>
 "Tidy command for HTML5
