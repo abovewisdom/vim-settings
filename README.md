@@ -5,6 +5,7 @@ Dependencies
 brew install the_silver_searcher
 brew install fzf
 brew install tidy-html5
+brew install fasd
 ```
 Go to ~/.vim folder Run this: 
 ```
