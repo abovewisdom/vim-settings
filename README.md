@@ -1,3 +1,6 @@
+# Overview
+This repo is a part of my dot files https://github.com/abovewisdom/dotfiles repo but can be used independantly. 
+
 # Installation
 
 Dependencies
