@@ -22,3 +22,6 @@
 [submodule "pack/my-plugins/start/vim-css3-syntax"]
 	path = pack/my-plugins/start/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax
+[submodule "pack/my-plugins/start/vim-latex"]
+	path = pack/my-plugins/start/vim-latex
+	url = https://github.com/vim-latex/vim-latex
