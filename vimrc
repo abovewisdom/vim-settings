@@ -42,6 +42,19 @@ endfunction
 map <F12> :call ToggleSolarizedTheme()<CR>
 "make insert -> Normal fast
 set timeoutlen=1000 ttimeoutlen=0
+"Apex plugin settings
+filetype plugin on
+"hidden buffers
+set hidden
+"make vimdiff better
+:set diffopt+=algorithm:patience
+"Force.com settings
+let g:apex_backup_folder="/tmp/apex/backup"
+let g:apex_temp_folder="/tmp/apex/gvim-deployment"
+"Credentials for the Salesforce org go in the directory below
+let g:apex_properties_folder="/media/truecrypt1"
+"Path to a package that is needed
+let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
 "shortcut key for copy entire file to clipboard 
@@ -58,6 +71,7 @@ cabbr <expr> %% expand('%:p:h')
 "light search on at first
 set hlsearch
 "highlight searches
+set hlsearch
 noremap ,; :set hlsearch!<CR>
 "Tidy command for HTML5
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
