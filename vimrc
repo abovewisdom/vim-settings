@@ -83,3 +83,10 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+" Adding buffer hotkeys
+:nmap 1 :b1<CR>
+:nmap 2 :b2<CR>
+:nmap 3 :b3<CR>
+:nmap 4 :b4<CR>
+:nmap 5 :b5<CR>
+:nmap 6 :b6<CR>
