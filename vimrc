@@ -1,3 +1,6 @@
+"Set compatability due to requirement with vim-force plugin
+set nocompatible
+"syntax highlighting
 syntax on
 "indent properly if the filtype is known
 if has("autocmd")
@@ -90,6 +93,8 @@ let g:tex_flavor='latex'
 :nmap 4 :b4<CR>
 :nmap 5 :b5<CR>
 :nmap 6 :b6<CR>
+"hotkey to update help pages
+nmap jj :helptags ~/.vim/doc<CR>
 "rpmose mode, use 'call WordProcessor() to activate'
 func! WordProcessor()
   " movement changes
