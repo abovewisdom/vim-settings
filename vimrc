@@ -1,3 +1,6 @@
+"Set compatability due to requirement with vim-force plugin
+set nocompatible
+"syntax highlighting
 syntax on
 "indent properly if the filtype is known
 if has("autocmd")
@@ -49,10 +52,10 @@ set hidden
 "make vimdiff better
 set diffopt+=algorithm:patience
 "Force.com settings
-let g:apex_backup_folder="/tmp/apex/backup"
-let g:apex_temp_folder="/tmp/apex/gvim-deployment"
+let g:apex_backup_folder="~/tmp/apex/backup"
+let g:apex_temp_folder="~/tmp/apex/gvim-deployment"
 "Credentials for the Salesforce org go in the directory below
-let g:apex_properties_folder="/media/truecrypt1"
+let g:apex_properties_folder="~/tmp/truecrypt1"
 "Path to a package that is needed
 let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
 " Enable fzf
@@ -90,3 +93,24 @@ let g:tex_flavor='latex'
 :nmap 4 :b4<CR>
 :nmap 5 :b5<CR>
 :nmap 6 :b6<CR>
+"hotkey to update help pages
+nmap jj :helptags ~/.vim/doc<CR>
+"rpmose mode, use 'call WordProcessor() to activate'
+func! WordProcessor()
+  " movement changes
+  map j gj
+  map k gk
+  " formatting text
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  setlocal wrap
+  setlocal linebreak
+  " spelling and thesaurus
+  setlocal spell spelllang=en_us
+  set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
+  " complete+=s makes autocompletion search the thesaurus
+  set complete+=s
+  :call ToggleSolarizedTheme()<CR>
+endfu
+com! WP call WordProcessor()
+
