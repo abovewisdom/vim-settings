@@ -49,8 +49,8 @@ set timeoutlen=1000 ttimeoutlen=0
 filetype plugin on
 "hidden buffers
 set hidden
-"make vimdiff better
-set diffopt+=algorithm:patience
+"make vimdiff better(Currently not working need to fix)
+"set diffopt+=algorithm:patience
 "Force.com settings
 let g:apex_backup_folder="~/tmp/apex/backup"
 let g:apex_temp_folder="~/tmp/apex/gvim-deployment"
