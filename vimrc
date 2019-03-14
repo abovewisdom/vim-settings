@@ -47,7 +47,7 @@ filetype plugin on
 "hidden buffers
 set hidden
 "make vimdiff better
-:set diffopt+=algorithm:patience
+set diffopt+=algorithm:patience
 "Force.com settings
 let g:apex_backup_folder="/tmp/apex/backup"
 let g:apex_temp_folder="/tmp/apex/gvim-deployment"
