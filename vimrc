@@ -113,4 +113,5 @@ func! WordProcessor()
   :call ToggleSolarizedTheme()<CR>
 endfu
 com! WP call WordProcessor()
-
+"Run a Python script you are working on from vim
+nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
