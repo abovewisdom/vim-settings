@@ -73,6 +73,8 @@ let g:lightline#bufferline#show_number = 1
 cabbr <expr> %% expand('%:p:h')
 "light search on at first
 set hlsearch
+"highlight searches
+set hlsearch
 noremap ,; :set hlsearch!<CR>
 "Tidy command for HTML5
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
@@ -85,12 +87,10 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 " Adding buffer hotkeys
-:nmap 1 :b 
 "hotkey to update help pages
 nmap ,j :helptags ~/.vim/doc<CR>
 "rpmose mode, use 'call WordProcessor() to activate'
 func! WordProcessor()
-  " movement changes
   map j gj
   map k gk
   " formatting text
@@ -103,7 +103,6 @@ func! WordProcessor()
   set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
   " complete+=s makes autocompletion search the thesaurus
   set complete+=s
-  call ToggleSolarizedTheme()
 endfu
 com! WP call WordProcessor()
 "com! WP call WordProcessor()
