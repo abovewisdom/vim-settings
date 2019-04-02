@@ -87,12 +87,7 @@ filetype indent on
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 " Adding buffer hotkeys
-:nmap 1 :b1<CR>
-:nmap 2 :b2<CR>
-:nmap 3 :b3<CR>
-:nmap 4 :b4<CR>
-:nmap 5 :b5<CR>
-:nmap 6 :b6<CR>
+:nmap 1 :b 
 "hotkey to update help pages
 nmap ,j :helptags ~/.vim/doc<CR>
 "rpmose mode, use 'call WordProcessor() to activate'
@@ -110,8 +105,9 @@ func! WordProcessor()
   set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
   " complete+=s makes autocompletion search the thesaurus
   set complete+=s
-  :call ToggleSolarizedTheme()<CR>
+  call ToggleSolarizedTheme()
 endfu
 com! WP call WordProcessor()
-"Run a Python script you are working on from vim
+"com! WP call WordProcessor()
+"Run Python script from VIM
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
