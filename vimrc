@@ -45,12 +45,10 @@ endfunction
 map <F12> :call ToggleSolarizedTheme()<CR>
 "make insert -> Normal fast
 set timeoutlen=1000 ttimeoutlen=0
-"Apex plugin settings
-filetype plugin on
 "hidden buffers
 set hidden
-"make vimdiff better(Currently not working need to fix)
-"set diffopt+=algorithm:patience
+"make vimdiff use patience algorithm for diffs
+set diffopt=internal,algorithm:patience,indent-heuristic
 "Force.com settings
 let g:apex_backup_folder="~/tmp/apex/backup"
 let g:apex_temp_folder="~/tmp/apex/gvim-deployment"
@@ -62,8 +60,6 @@ let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-for
 set rtp+=/usr/local/opt/fzf
 "shortcut key for copy entire file to clipboard 
 noremap ,, :%w !pbcopy<CR>
-"hide buffers instead of needing to save before switching
-set hidden
 "settings for lightline-bufferline
 let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
@@ -71,15 +67,19 @@ let g:lightline.component_type   = {'buffers': 'tabsel'}
 let g:lightline#bufferline#show_number = 1
 "abreviation for finding files in parent folder usage: :e %%/
 cabbr <expr> %% expand('%:p:h')
-"light search on at first
+"highlight search  by default
 set hlsearch
 noremap ,; :set hlsearch!<CR>
+"search, ignore case by default
+set ignorecase
+"if search has upper be case sensitive otherwise not
+set smartcase
+"move to search as you type
+set incsearch
 "Tidy command for HTML5
 :vmap ,x :!tidy -q -i --show-errors 0<CR>
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
@@ -106,6 +106,5 @@ func! WordProcessor()
   call ToggleSolarizedTheme()
 endfu
 com! WP call WordProcessor()
-"com! WP call WordProcessor()
 "Run Python script from VIM
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
