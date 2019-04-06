@@ -175,7 +175,6 @@ ctrlp-mappings	ctrlp.txt	/*ctrlp-mappings*
 ctrlp-miscellaneous-configs	ctrlp.txt	/*ctrlp-miscellaneous-configs*
 ctrlp-options	ctrlp.txt	/*ctrlp-options*
 ctrlp.txt	ctrlp.txt	/*ctrlp.txt*
-<<<<<<< HEAD
 force.com	force.com.txt	/*force.com*
 force.com-config-example	force.com.txt	/*force.com-config-example*
 force.com-credits	force.com.txt	/*force.com-credits*
