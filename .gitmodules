@@ -25,3 +25,6 @@
 [submodule "pack/my-plugins/start/vim-latex"]
 	path = pack/my-plugins/start/vim-latex
 	url = https://github.com/vim-latex/vim-latex
+[submodule "pack/my-plugins/start/vim-tmux-navigator"]
+	path = pack/my-plugins/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

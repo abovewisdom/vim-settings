@@ -108,3 +108,10 @@ endfu
 com! WP call WordProcessor()
 "Run Python script from VIM
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
+"Run Python tests from VIM
+nnoremap <buffer> <F8> :exec '!pytest' shellescape(@%, 1)<cr>
+"Easier Split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
