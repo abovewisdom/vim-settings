@@ -55,7 +55,7 @@ let g:apex_temp_folder="~/tmp/apex/gvim-deployment"
 "Credentials for the Salesforce org go in the directory below
 let g:apex_properties_folder="~/tmp/truecrypt1"
 "Path to a package that is needed
-let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
+let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force/tooling-force.com-0.4.4.0.jar"
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
 "shortcut key for copy entire file to clipboard 
@@ -115,3 +115,5 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" let terminal resize scale the internal windows
+autocmd VimResized * :wincmd =
