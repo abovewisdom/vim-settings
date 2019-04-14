@@ -55,7 +55,7 @@ let g:apex_temp_folder="~/tmp/apex/gvim-deployment"
 "Credentials for the Salesforce org go in the directory below
 let g:apex_properties_folder="~/tmp/truecrypt1"
 "Path to a package that is needed
-let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force/tooling-force.com-0.4.4.0.jar"
+let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
 "shortcut key for copy entire file to clipboard 
@@ -109,11 +109,12 @@ com! WP call WordProcessor()
 "Run Python script from VIM
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 "Run Python tests from VIM
-nnoremap <buffer> <F8> :exec '!pytest' shellescape(@%, 1)<cr>
+nnoremap <buffer> <F8> :exec '!python3 -m pytest' shellescape(@%, 1)<cr>
+"Add python debug statement
+nmap 2 :norm oimport pdb; pdb.set_trace()<cr>
 "Easier Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" let terminal resize scale the internal windows
-autocmd VimResized * :wincmd =
+
