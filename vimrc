@@ -50,12 +50,12 @@ set hidden
 "make vimdiff use patience algorithm for diffs
 set diffopt=internal,algorithm:patience,indent-heuristic
 "Force.com settings
-let g:apex_backup_folder="~/tmp/apex/backup"
-let g:apex_temp_folder="~/tmp/apex/gvim-deployment"
+let g:apex_backup_folder="/Users/dflaten/tmp/apex/backup"
+let g:apex_temp_folder="/Users/dflaten/tmp/apex/gvim-deployment"
 "Credentials for the Salesforce org go in the directory below
-let g:apex_properties_folder="~/tmp/truecrypt1"
+let g:apex_properties_folder="/Users/dflaten/tmp/apex/gvim-deployment"
 "Path to a package that is needed
-let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force/tooling-force.com-0.4.4.0.jar"
+let g:apex_tooling_force_dot_com_path="/Users/dflaten/tmp/apex/tooling-force.com-0.4.4.0.jar"
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
 "shortcut key for copy entire file to clipboard 
@@ -103,7 +103,6 @@ func! WordProcessor()
   set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
   " complete+=s makes autocompletion search the thesaurus
   set complete+=s
-  call ToggleSolarizedTheme()
 endfu
 com! WP call WordProcessor()
 "Run Python script from VIM
@@ -117,3 +116,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " let terminal resize scale the internal windows
 autocmd VimResized * :wincmd =
+" Execute anonymous Apex
+nnoremap <buffer> <F7> :exec '!sfdx force:apex:execute -f ' shellescape(@%, 1)<cr>
+" Set apex code defaults, 4 spaces for tabs
+autocmd FileType apexcode setlocal shiftwidth=4 tabstop=4
