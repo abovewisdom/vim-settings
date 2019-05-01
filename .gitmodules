@@ -28,3 +28,6 @@
 [submodule "pack/my-plugins/start/vim-racket"]
 	path = pack/my-plugins/start/vim-racket
 	url = https://github.com/wlangstroth/vim-racket.git
+[submodule "pack/my-plugins/start/diffconflicts"]
+	path = pack/my-plugins/start/diffconflicts
+	url = https://github.com/whiteinge/diffconflicts.git
