@@ -56,6 +56,34 @@ let g:apex_temp_folder="/Users/dflaten/tmp/apex/gvim-deployment"
 let g:apex_properties_folder="/Users/dflaten/tmp/apex/gvim-deployment"
 "Path to a package that is needed
 let g:apex_tooling_force_dot_com_path="/Users/dflaten/tmp/apex/tooling-force.com-0.4.4.0.jar"
+" Enable fzf
+set rtp+=/usr/local/opt/fzf
+"shortcut key for copy entire file to clipboard 
+noremap ,, :%w !pbcopy<CR>
+"settings for lightline-bufferline
+let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+let g:lightline#bufferline#show_number = 1
+"abreviation for finding files in parent folder usage: :e %%/
+cabbr <expr> %% expand('%:p:h')
+"highlight search  by default
+set hlsearch
+noremap ,; :set hlsearch!<CR>
+"search, ignore case by default
+set ignorecase
+"if search has upper be case sensitive otherwise not
+set smartcase
+"move to search as you type
+set incsearch
+"Tidy command for HTML5
+:vmap ,x :!tidy -q -i --show-errors 0<CR>
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
 "hotkey to update help pages
 nmap ,j :helptags ~/.vim/doc<CR>
 "rpmose mode, use 'call WordProcessor() to activate'
