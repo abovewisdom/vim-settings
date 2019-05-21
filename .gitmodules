@@ -31,3 +31,6 @@
 [submodule "pack/my-plugins/start/diffconflicts"]
 	path = pack/my-plugins/start/diffconflicts
 	url = https://github.com/whiteinge/diffconflicts.git
+[submodule "pack/my-plugins/start/vim-signify"]
+	path = pack/my-plugins/start/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
