@@ -56,35 +56,6 @@ let g:apex_temp_folder="/Users/dflaten/tmp/apex/gvim-deployment"
 let g:apex_properties_folder="/Users/dflaten/tmp/apex/gvim-deployment"
 "Path to a package that is needed
 let g:apex_tooling_force_dot_com_path="/Users/dflaten/tmp/apex/tooling-force.com-0.4.4.0.jar"
-let g:apex_tooling_force_dot_com_path="~/.vim/pack/my-plugins/start/toolling-force"
-" Enable fzf
-set rtp+=/usr/local/opt/fzf
-"shortcut key for copy entire file to clipboard 
-noremap ,, :%w !pbcopy<CR>
-"settings for lightline-bufferline
-let g:lightline.tabline          = {'left': [['buffers']], 'right':[['']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type   = {'buffers': 'tabsel'}
-let g:lightline#bufferline#show_number = 1
-"abreviation for finding files in parent folder usage: :e %%/
-cabbr <expr> %% expand('%:p:h')
-"highlight search  by default
-set hlsearch
-noremap ,; :set hlsearch!<CR>
-"search, ignore case by default
-set ignorecase
-"if search has upper be case sensitive otherwise not
-set smartcase
-"move to search as you type
-set incsearch
-"Tidy command for HTML5
-:vmap ,x :!tidy -q -i --show-errors 0<CR>
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
 "hotkey to update help pages
 nmap ,j :helptags ~/.vim/doc<CR>
 "rpmose mode, use 'call WordProcessor() to activate'
@@ -107,20 +78,20 @@ com! WP call WordProcessor()
 "Run Python script from VIM
 nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 "Run Python tests from VIM
-nnoremap <buffer> <F8> :exec '!python3 -m pytest' shellescape(@%, 1)<cr>
-"Add python debug statement
-nmap 2 :norm oimport pdb; pdb.set_trace()<cr>
+nnoremap <buffer> <F8> :exec '!pytest' shellescape(@%, 1)<cr>
 "Easier Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" let terminal resize scale the internal windows
+"let terminal resize scale the internal windows
 autocmd VimResized * :wincmd =
-" Execute anonymous Apex
+"Execute anonymous Apex
 nnoremap <buffer> <F7> :exec '!sfdx force:apex:execute -f ' shellescape(@%, 1)<cr>
-" Set apex code defaults, 4 spaces for tabs
+"Set apex code defaults, 4 spaces for tabs
 autocmd FileType apexcode setlocal shiftwidth=4 tabstop=4
-" set vcs to git
+"set vcs to git
 let g:signify_vcs_list = [ 'git' ]
 highlight SignColumn ctermbg=073642
+"look for ctags file in source directory
+set tags=tags
