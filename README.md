@@ -24,6 +24,15 @@ Pull in the submodules by going to ~/.vim and running:
 git submodule init
 git submodule update
 ```
+Run these commands to change the merge tool to diffconflicts(a plugin to vim)
+
+```
+git config --global merge.tool diffconflicts
+git config --global mergetool.diffconflicts.cmd 'vim -c DiffConflicts "$MERGED" "$BASE" "$LOCAL" "$REMOTE"'
+git config --global mergetool.diffconflicts.trustExitCode true
+git config --global mergetool.keepBackup false
+```
+
 Add new plugins or submodules by going to the ~/.vim/pack/my-plugins/start/ and adding:
 ```
 git submodule add [INSERT GIT URL]
