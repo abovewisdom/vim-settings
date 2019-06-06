@@ -84,6 +84,8 @@ filetype plugin on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+"setting filetype for typesetting
+let g:Tex_CompileRule_pdf = 'xelatex'
 "hotkey to update help pages
 nmap ,j :helptags ~/.vim/doc<CR>
 "rpmose mode, use 'call WordProcessor() to activate'
@@ -121,5 +123,3 @@ autocmd FileType apexcode setlocal shiftwidth=4 tabstop=4
 "set vcs to git
 let g:signify_vcs_list = [ 'git' ]
 highlight SignColumn ctermbg=073642
-"look for ctags file in source directory
-set tags=tags
