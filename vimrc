@@ -123,3 +123,5 @@ autocmd FileType apexcode setlocal shiftwidth=4 tabstop=4
 "set vcs to git
 let g:signify_vcs_list = [ 'git' ]
 highlight SignColumn ctermbg=073642
+"toggle spell check
+:command SP :setlocal spell! spelllang=en_us
