@@ -124,4 +124,26 @@ autocmd FileType apexcode setlocal shiftwidth=4 tabstop=4
 let g:signify_vcs_list = [ 'git' ]
 highlight SignColumn ctermbg=073642
 "toggle spell check
-:command SP :setlocal spell! spelllang=en_us
+:command SC :setlocal spell! spelllang=en_us
+"search for selection
+vnoremap // y/<C-R>"<CR>
+"java settings
+func! JavaSettings()
+  set path=**
+  "chdir your/project/root "update this based on project
+  "highlight functions using java guidelines
+  let java_highlight_functions="style"
+  "use below if people in project aren't following guidelines
+  "let java_highlight_functions="indent"
+  "System.out.println() and System.err.println() highlighted diff for debug.
+  let java_highlight_debug=1
+  "Take care of indents for Java.
+  set autoindent
+  set si
+  set shiftwidth=4
+  let java_highlight_functions = 1
+  let java_highlight_all = 1
+  " If you are trying this at runtime, you need to reload the syntax file
+  set filetype=java
+endfu
+autocmd FileType java call JavaSettings() 
