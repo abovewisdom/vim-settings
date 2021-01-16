@@ -114,8 +114,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-"let terminal resize scale the internal windows
-autocmd VimResized * :wincmd =
 "Execute anonymous Apex
 nnoremap <buffer> <F7> :exec '!sfdx force:apex:execute -f ' shellescape(@%, 1)<cr>
 "Set apex code defaults, 4 spaces for tabs
